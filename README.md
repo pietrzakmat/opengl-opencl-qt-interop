@@ -1,9 +1,10 @@
 # opencl-opencl-qt-interop
 The project attempts to show minimum example of OpenGL and OpenCL interoparability within Qt framework. 
-The steps of interoperability are based onfollowing publications:
+The steps of interoperability are based on following publications:
 1) https://www.codeproject.com/Articles/685281/OpenGL-OpenCL-Interoperability-A-Case-Study-Using  
 2) https://software.intel.com/en-us/articles/opencl-and-opengl-interoperability-tutorial  
-This project extends the proposed idea by utlizing Qt framework. The comparison of simple greyscale image conversion is made by implementing in two GPU-based technologies:  
+
+This project extends the proposed ideas by utlizing Qt framework. The comparison of simple greyscale image conversion is made by implementing in two GPU-based technologies:  
 A) OpenGL based, implementation in fragment shader.  
 B) OpenCL based, implementation by OpenCL kernel.  
 
