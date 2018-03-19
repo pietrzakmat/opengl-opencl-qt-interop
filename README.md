@@ -20,10 +20,10 @@ I tested it with several hardware platforms, with different OpenCL configuration
 It works here as expeceted. What is worth to mention is the CPU usage. OpenGL shader implementation consumes maximum up to 30% while OpenCL consumes 100% of the CPU load. I believe this is an issue, possibly with some buggy implementation or incorrect driver choice.
 
 2) Ubuntu 16.04 and Intel Iris IGP (Integrated Graphics Processor) and using Intel SDK.
-The issue is that on the call clCreateFromGLTexture(...) returns CL_INVALID_DEVICE after the shared OpenCL context has been created correctly... So the example fails in that case. 
+The issue is that on the call clCreateFromGLTexture(...) returns CL_INVALID_CONTEXT after the shared OpenCL context has been created correctly... So the example fails in that case. 
 Checked the same with Beignet OpenCL implementation, the same error in that location.
 
 3) Toshiba laptop with Intel HD Graphics 520 and Manjaro OS.
-Beignet OpenCL implementation. The same clCreateFromGLTexture(...) returns CL_INVALID_DEVICE...
+Beignet OpenCL implementation. The same clCreateFromGLTexture(...) returns CL_INVALID_CONTEXT...
 
 To be continued...
