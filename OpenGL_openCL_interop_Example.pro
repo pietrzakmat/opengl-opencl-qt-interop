@@ -10,7 +10,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 QMAKE_CXXFLAGS += -msse4.2 -mtune=corei7-avx -Ofast
 
-TARGET = OpenCL_openGL_interop
+TARGET = OpenGL_openCL_interop
 TEMPLATE = app
 DESTDIR = $$PWD/bin
 

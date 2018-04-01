@@ -38,7 +38,6 @@ DisplayWindow::~DisplayWindow()
     {
         delete m_fboIn;
         delete m_fboOut;
-        delete m_fboExtra3;
     }
     qDebug() << Q_FUNC_INFO;
 }
@@ -341,7 +340,7 @@ void DisplayWindow::initializeOpenCl()
                 &err
                 );
 
-    std::cout << get_error_string(err) << std::endl;
+//    std::cout << get_error_string(err) << std::endl;
 
     m_memCurDst = clCreateFromGLTexture(
                 m_contextCL ,
@@ -382,12 +381,9 @@ void DisplayWindow::initializeGL()
 
     m_fboIn = new QOpenGLFramebufferObject(m_width, m_height, QOpenGLFramebufferObject::NoAttachment, GL_TEXTURE_2D, GL_RGB);
     m_fboOut = new QOpenGLFramebufferObject(m_width, m_height, QOpenGLFramebufferObject::NoAttachment, GL_TEXTURE_2D, GL_RGB);
-    m_fboExtra3 = new QOpenGLFramebufferObject(m_width, m_height, QOpenGLFramebufferObject::NoAttachment, GL_TEXTURE_2D, GL_RGB);
 
     createTextureRGB(m_fboIn->texture(),m_fboIn->width(),m_fboIn->height(),m_fboIn->format().internalTextureFormat(), GL_UNSIGNED_BYTE, GL_LINEAR);
     createTextureRGB(m_fboOut->texture(),m_fboOut->width(),m_fboOut->height(),m_fboOut->format().internalTextureFormat(), GL_UNSIGNED_BYTE, GL_LINEAR);
-    createTextureRGB(m_fboExtra3->texture(),m_fboExtra3->width(),m_fboExtra3->height(),m_fboExtra3->format().internalTextureFormat(), GL_UNSIGNED_BYTE, GL_LINEAR);
-
 
 //    initializeOpenCl_Intel();
     initializeOpenCl();
