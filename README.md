@@ -1,4 +1,4 @@
-# opencl-opencl-qt-interop
+# opengl-opencl-qt-interop
 The project attempts to show minimum example of OpenGL and OpenCL interoparability within Qt framework. 
 The steps of interoperability are based on following publications:
 1) https://www.codeproject.com/Articles/685281/OpenGL-OpenCL-Interoperability-A-Case-Study-Using  
